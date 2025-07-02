@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Clean body */
+body {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Container utilities */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* Night theme (dark) */
+[data-theme="night"] {
+  --color-primary: #38bdf8;
+  --color-secondary: #818cf8;
+  --color-accent: #f471b5;
+  --color-base-100: #0f172a;
+  --color-base-200: #1e293b;
+  --color-base-300: #334155;
+  --color-base-content: #f1f5f9;
+  color-scheme: dark;
+}
+
+[data-theme="night"] body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Winter theme (light) */
+[data-theme="winter"] {
+  --color-primary: #0369a1;
+  --color-secondary: #0891b2;
+  --color-accent: #7c3aed;
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #0f172a;
+  color-scheme: light;
+}
+
+[data-theme="winter"] body {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Debug indicators */
+[data-theme="night"]::before {
+  content: "🌙 Night Mode";
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+[data-theme="winter"]::before {
+  content: "❄️ Winter Mode";
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: #0369a1;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 9999;
+  font-weight: bold;
+}

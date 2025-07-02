@@ -1,0 +1,145 @@
+---
+// Services section component
+---
+
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 text-base-content">Our Services</h2>
+      <p class="text-lg text-base-content/70 max-w-xl mx-auto">
+        Full-service digital solutions designed to help your business grow and succeed online
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Web Development -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">Web Development</h3>
+          <p class="text-base-content/70">
+            Hand-coded websites that load fast, rank high, and convert visitors into customers. No page builders, just pure performance.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-primary badge-outline">HTML/CSS</div>
+            <div class="badge badge-secondary badge-outline">JavaScript</div>
+            <div class="badge badge-accent badge-outline">Astro</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SEO -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">SEO Optimization</h3>
+          <p class="text-base-content/70">
+            Get found by your local customers. Our SEO strategies help businesses rank higher and attract more qualified leads.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-secondary badge-outline">Local SEO</div>
+            <div class="badge badge-primary badge-outline">Content</div>
+            <div class="badge badge-accent badge-outline">Analytics</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Digital Marketing -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">Digital Marketing</h3>
+          <p class="text-base-content/70">
+            Comprehensive marketing strategies including Google Ads, social media, and content marketing to boost your online presence.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-accent badge-outline">Google Ads</div>
+            <div class="badge badge-primary badge-outline">Social Media</div>
+            <div class="badge badge-secondary badge-outline">Email</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Maintenance -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-info/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">Website Maintenance</h3>
+          <p class="text-base-content/70">
+            Keep your website secure, updated, and running smoothly. We handle all the technical stuff so you can focus on your business.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-info badge-outline">Updates</div>
+            <div class="badge badge-success badge-outline">Security</div>
+            <div class="badge badge-warning badge-outline">Backups</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- E-commerce -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-success/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">E-commerce Solutions</h3>
+          <p class="text-base-content/70">
+            Sell online with custom e-commerce solutions. From simple product catalogs to full shopping experiences.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-success badge-outline">Shopify</div>
+            <div class="badge badge-primary badge-outline">WooCommerce</div>
+            <div class="badge badge-accent badge-outline">Custom</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Consulting -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+        <div class="card-body">
+          <div class="w-16 h-16 bg-warning/20 rounded-lg flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="card-title text-base-content">Strategy Consulting</h3>
+          <p class="text-base-content/70">
+            Get expert advice on digital strategy, technology choices, and growth planning. We help you make informed decisions.
+          </p>
+          <div class="card-actions justify-start mt-4">
+            <div class="badge badge-warning badge-outline">Strategy</div>
+            <div class="badge badge-primary badge-outline">Planning</div>
+            <div class="badge badge-secondary badge-outline">Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="/services" class="btn btn-primary btn-lg">
+        View All Services
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,164 @@
+---
+// Floating card navigation like the example
+---
+
+<header class="mx-auto mt-6 max-w-7xl rounded-2xl bg-base-100 px-6 py-4 shadow-xl border border-base-300">
+  <div class="flex items-center justify-between">
+    <!-- Logo + Title -->
+    <div class="flex items-center space-x-3">
+      <span class="text-2xl">🚀</span>
+      <span class="text-2xl font-bold text-base-content">Roc-IT Web</span>
+    </div>
+    
+    <!-- Nav -->
+    <nav class="hidden md:flex space-x-6 text-base-content font-medium">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <a href="/services" class="hover:text-primary transition-colors">Services</a>
+      <a href="/portfolio" class="hover:text-primary transition-colors">Portfolio</a>
+      <a href="/tools" class="hover:text-primary transition-colors">Free Tools</a>
+      <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+      <a href="/contact" class="hover:text-primary transition-colors">Contact</a>
+    </nav>
+    
+    <!-- Right side buttons -->
+    <div class="hidden md:flex items-center space-x-3">
+      <!-- Theme toggle -->
+      <button 
+        id="theme-toggle-desktop"
+        data-toggle-theme="winter,night" 
+        data-act-class="ACTIVECLASS" 
+        class="btn btn-ghost btn-circle btn-sm"
+        aria-label="Toggle theme"
+      >
+        <!-- Sun icon (shown in dark theme) -->
+        <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <!-- Moon icon (shown in light theme) -->
+        <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+      
+      <!-- CTA -->
+      <a href="/contact" class="btn btn-primary btn-sm rounded-full shadow-md px-6">
+        Get Started
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden flex items-center space-x-2">
+      <!-- Theme toggle mobile -->
+      <button 
+        id="theme-toggle-mobile"
+        data-toggle-theme="winter,night" 
+        data-act-class="ACTIVECLASS" 
+        class="btn btn-ghost btn-circle btn-sm"
+        aria-label="Toggle theme"
+      >
+        <!-- Sun icon (shown in dark theme) -->
+        <svg class="sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <!-- Moon icon (shown in light theme) -->
+        <svg class="moon-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+      </button>
+      
+      <button 
+        id="mobile-menu-toggle"
+        class="btn btn-ghost btn-circle btn-sm"
+        aria-label="Toggle mobile menu"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden mt-4 pt-4 border-t border-base-300">
+    <nav class="flex flex-col space-y-3">
+      <a href="/" class="text-base-content hover:text-primary transition-colors font-medium">Home</a>
+      <a href="/services" class="text-base-content hover:text-primary transition-colors font-medium">Services</a>
+      <a href="/portfolio" class="text-base-content hover:text-primary transition-colors font-medium">Portfolio</a>
+      <a href="/tools" class="text-base-content hover:text-primary transition-colors font-medium">Free Tools</a>
+      <a href="/blog" class="text-base-content hover:text-primary transition-colors font-medium">Blog</a>
+      <a href="/contact" class="text-base-content hover:text-primary transition-colors font-medium">Contact</a>
+      
+      <div class="pt-3">
+        <a href="/contact" class="btn btn-primary btn-sm rounded-full w-full">
+          Get Started
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (toggleButton && mobileMenu) {
+      toggleButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Theme toggle icon switching
+    function updateThemeIcons() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const isDark = currentTheme === 'night';
+      
+      // Update both desktop and mobile theme toggles
+      const desktopToggle = document.getElementById('theme-toggle-desktop');
+      const mobileToggle = document.getElementById('theme-toggle-mobile');
+      
+      [desktopToggle, mobileToggle].forEach(toggle => {
+        if (toggle) {
+          const sunIcon = toggle.querySelector('.sun-icon');
+          const moonIcon = toggle.querySelector('.moon-icon');
+          
+          if (isDark) {
+            // Dark theme: show sun icon (to switch to light)
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+          } else {
+            // Light theme: show moon icon (to switch to dark)
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+          }
+        }
+      });
+    }
+
+    // Update icons on page load
+    updateThemeIcons();
+    
+    // Listen for theme changes
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          updateThemeIcons();
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+  });
+</script>
+
+<style>
+  /* Theme toggle icon styles */
+  .sun-icon,
+  .moon-icon {
+    transition: opacity 0.2s ease;
+  }
+</style>

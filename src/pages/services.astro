@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+  <script is:inline>
+      // ☝️ This script prevent the FART effect.
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else
+      document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"));
+      // "theme" LocalStorage value is set by the package to remember user preference.
+      // The value is checked and applyed before rendering anything.
+  </script>
+  <script>
+      import { themeChange } from "theme-change";
+      themeChange();
+       // 👆 you could import the CDN directly instead of these two lines
+    </script>
+    <title>My crazy credit page</title>
+  </head>
+  <body>
+    <h1>Welcome to my services page!</h1>
+  </body>
+</html>

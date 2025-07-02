@@ -1,16 +1,35 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout 
+  title="Roc-IT Web - Web Development & Digital Marketing"
+  description="Professional web development and digital marketing services for local businesses."
+>
+  <Navigation />
+  
+  <!-- Clean text over starfield like Oak Harbor -->
+  <section class="min-h-screen flex items-center justify-center pt-5">
+    <div class="max-w-4xl mx-auto px-6 text-center pb-32">
+      <h1 class="text-6xl font-bold mb-6 text-base-content leading-tight">
+        GROW YOUR BUSINESS WITH<br>
+        <span class="text-primary">STELLAR</span> WEB SOLUTIONS
+      </h1>
+      <p class="text-xl mb-12 text-base-content/90 max-w-2xl mx-auto leading-relaxed">
+        No page builders or WordPress. We offer 100% hand-coded websites with superior results starting at $175/mo as well as Google Ads and SEO services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn btn-primary btn-lg px-8 py-4 text-lg">
+          GET STARTED
+        </a>
+        <a href="/about" class="btn btn-outline btn-lg px-8 py-4 text-lg">
+          ABOUT US
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Extra space to see the stars -->
+  <section class="h-screen"></section>
+</Layout>
